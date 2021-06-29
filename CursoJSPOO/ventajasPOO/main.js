@@ -1,8 +1,22 @@
 class Class {
   constructor ( {
-    name
-  } )
-}
+    name,
+    comments = [],
+    questions = [],
+    resources = [],
+    relatedClasses = [],
+    nextClass,
+    pastClass
+  } ) {
+    this.name = name;
+    this.comments = comments;
+    this.questions = questions;
+    this.resources = resources;
+    this.relatedClasses = relatedClasses;
+    this.nextClass = nextClass;
+    this.pastClass = pastClass;
+  }
+};
 class Course {
   constructor ( {
     name,
@@ -11,6 +25,7 @@ class Course {
   } ) {
     this.name   = name;
     this.clases = clases;
+    this.comments = comments;
   }
 }
 const cursoProgramaciónBasica = new Course ( {
